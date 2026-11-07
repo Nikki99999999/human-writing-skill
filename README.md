@@ -1,3 +1,5 @@
+> **社区适配版**：本仓库以 [卡兹克的 human-writing 1.1.0](https://github.com/KKKKhazix/human-writing) 为基础，由 Nikki99999999 适配。新增非虚构证据链判定和论证型内容框架。下方 1.1.0 介绍、徽章和原作者资源均对应上游版本；适配来源与范围见 [ORIGINS.md](./ORIGINS.md)。
+
 <p align="center">
   <img src="./assets/readme-cover.svg" alt="活人感写作" width="100%">
 </p>
@@ -38,15 +40,15 @@
 把下面这句话发给你的 Agent。
 
 ```bash
-帮我安装这个skill：https://github.com/KKKKhazix/human-writing
+帮我安装这个skill：https://github.com/Nikki99999999/human-writing-skill （安装仓库中的 human-writing/ 子目录）
 ```
 
-Agent 会读取仓库、找到 `human-writing`，完成安装。装好之后显示名为「活人感写作」。
+Agent 会读取仓库、找到 `human-writing/` 子目录，完成安装。装好之后显示名为「活人感写作」。上方链接指向本社区适配版；原版安装地址见[卡兹克的仓库](https://github.com/KKKKhazix/human-writing)。
 
 <details>
 <summary><strong>Agent 不支持直接安装时</strong></summary>
 
-从 [Releases](https://github.com/KKKKhazix/human-writing/releases/latest) 下载，或者把仓库里的 [`human-writing`](./human-writing) 文件夹完整复制到本机 Skills 目录。文件夹名保留 `human-writing`。
+把本仓库里的 [`human-writing`](./human-writing) 文件夹完整复制到本机 Skills 目录。文件夹名保留 `human-writing`。上游原版的发布包仍可从[卡兹克的 Releases](https://github.com/KKKKhazix/human-writing/releases/latest) 下载。
 
 ```text
 ~/.agents/skills/human-writing/
@@ -87,6 +89,7 @@ human-writing/
 │   ├── reality.md
 │   ├── fiction.md
 │   ├── formats.md
+│   ├── argumentative-content.md
 │   └── revision.md
 └── scripts/
     └── check_prose.py
@@ -99,6 +102,7 @@ human-writing/
 | [`reality.md`](./human-writing/references/reality.md) | 真人、历史、新闻、数据和个人经历的事实边界 |
 | [`fiction.md`](./human-writing/references/fiction.md) | 小说、故事、虚构散文和对白的创作规则 |
 | [`formats.md`](./human-writing/references/formats.md) | 短内容、口播、演讲、教程、评测等特殊形式 |
+| [`argumentative-content.md`](./human-writing/references/argumentative-content.md) | Nikki 适配加入的论证型内容框架，用于解释、说服和辅助判断的稿件 |
 | [`revision.md`](./human-writing/references/revision.md) | 初稿写完之后怎么改——逐遍检查清单 |
 | [`check_prose.py`](./human-writing/scripts/check_prose.py) | 检查成稿有没有踩到硬禁令 |
 | [`human-writing-lite.md`](./human-writing/dist/human-writing-lite.md) | 蒸馏版，两千字以内，聊天窗口直接粘贴用 |
@@ -107,7 +111,9 @@ human-writing/
 
 ## 反馈
 
-MIT 协议开源。仓库只有原创规则和工具，没有第三方文章、训练语料或模型权重。
+本社区适配版的问题请提交到 [Nikki99999999/human-writing-skill](https://github.com/Nikki99999999/human-writing-skill/issues)。下面保留上游原作者的反馈入口，适用于原版 1.1.0。
+
+本仓库按 MIT 许可保留卡兹克原版的规则与工具，并收录 Nikki99999999 的社区新增内容；不收录私人原文、会话记录、训练语料或模型权重。
 
 碰到规则冲突、误报或者某个模型上表现不对，欢迎[提 Issue](https://github.com/KKKKhazix/human-writing/issues)。附上你的提示词、模型输出片段和你觉得应该是什么样，排查起来快很多。
 
